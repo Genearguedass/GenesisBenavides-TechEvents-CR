@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Listado de próximos eventos tecnológicos disponibles en TechEvents CR.">
+    <meta name="keywords" content="eventos, tecnología, React, inteligencia artificial, ciberseguridad, Costa Rica">
+    <meta name="author" content="TechEvents CR">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TechEvents CR | Eventos</title>
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="site-header">
+        <div class="container header-content">
+            <p class="logo"><strong>TechEvents CR</strong></p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="#tabla-eventos">Tabla de eventos</a></li>
+                    <li><a href="#evento-destacado">Evento destacado</a></li>
+                    <li>
+                        <a href="https://www.eventbrite.com/" target="_blank">
+                            Buscar eventos externos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <hr>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección de encabezado de eventos -->
+        <section class="hero">
+            <div class="container">
+                <h1>Próximos eventos tecnológicos</h1>
+                <p class="hero-text">
+                    En esta página se presenta una lista inicial de eventos disponibles. Cada evento incluye nombre, fecha, ubicación, imagen y categoría.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección con tarjetas de eventos -->
+        <section class="events-section">
+            <div class="container">
+                <h2>Listado de eventos</h2>
+                
+                <div class="events-grid">
+                    
+                    <!-- Tarjeta 1: React -->
+                    <article class="event-card">
+                        <figure>
+                            <img src="assets\imagenes/Imagen2.png" alt="Imagen representativa de un evento sobre React">
+                            <figcaption>Evento sobre desarrollo web moderno con React.</figcaption>
+                        </figure>
+                        <div class="event-card-content">
+                            <span class="event-category">React Summit Alajuela</span>
+                            <p>
+                                <b>Fecha:</b> <time datetime="2026-06-15">15 de junio de 2026</time>
+                            </p>
+                            <p><b>Ubicación:</b> Auditorio Central, Alajuela</p>
+                            <p><b>Categoría:</b> <span>Desarrollo Web</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: IA -->
+                    <article class="event-card">
+                        <figure>
+                            <img src="assets\imagenes/Imagen3.png" alt="Imagen representativa de inteligencia artificial">
+                            <figcaption>Charla sobre aplicaciones reales de inteligencia artificial.</figcaption>
+                        </figure>
+                        <div class="event-card-content">
+                            <span class="event-category">Foro de Inteligencia Artificial Aplicada</span>
+                            <p>
+                                <b>Fecha:</b> <time datetime="2026-06-22">22 de junio de 2026</time>
+                            </p>
+                            <p><b>Ubicación:</b> Centro de Innovación, San José</p>
+                            <p><b>Categoría:</b> <span>Inteligencia Artificial</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: Ciberseguridad -->
+                    <article class="event-card">
+                        <figure>
+                            <img src="assets\imagenes/Imagen4.png" alt="Imagen representativa de ciberseguridad">
+                            <figcaption>Taller introductorio sobre seguridad informática.</figcaption>
+                        </figure>
+                        <div class="event-card-content">
+                            <span class="event-category">Introducción a la Ciberseguridad</span>
+                            <p>
+                                <b>Fecha:</b> <time datetime="2026-06-29">29 de junio de 2026</time>
+                            </p>
+                            <p><b>Ubicación:</b> Laboratorio Tecnológico, Heredia</p>
+                            <p><b>Categoría:</b> <span>Ciberseguridad</span></p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Tabla de eventos -->
+        <section id="tabla-eventos" class="container">
+            <h2>Tabla de próximos eventos</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Fecha</th>
+                        <th>Modalidad</th>
+                        <th>Cupos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>React Summit Alajuela</td>
+                        <td>15 de junio de 2026</td>
+                        <td>Presencial</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>Foro de Inteligencia Artificial Aplicada</td>
+                        <td>22 de junio de 2026</td>
+                        <td>Híbrida</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Introducción a la Ciberseguridad</td>
+                        <td>29 de junio de 2026</td>
+                        <td>Presencial</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Aside informativo -->
+        <aside id="evento-destacado" class="container">
+            <h2>Información rápida</h2>
+            <p>
+                El evento con mayor disponibilidad es: <strong>Foro de Inteligencia Artificial Aplicada</strong>.
+            </p>
+            <p>
+                Modalidad: <em>Híbrida</em><br>
+                Cupos disponibles: <span>50</span>
+            </p>
+            <small>
+                Esta información será dinámica en próximas semanas del curso.
+            </small>
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <address>
+                TechEvents CR<br>
+                Correo: contacto@techeventscr.com<br>
+                Costa Rica
+            </address>
+
+            <ul>
+                <li><a href="index.html">Volver al inicio</a></li>
+                <li><a href="eventos.html">Ver eventos</a></li>
+                <li>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/table" target="_blank">
+                        Documentación sobre tablas
+                    </a>
+                </li>
+            </ul>
+
+            <p>
+                <small>&copy; 2026 TechEvents CR. Todos los derechos reservados.</small>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

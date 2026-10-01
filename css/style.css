@@ -1,0 +1,431 @@
+/* ==========================================
+   2.2 CSS BASE - Reglas generales del sitio
+   ========================================== */
+
+/* Elimina márgenes y espacios automáticos del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    /* Hace que padding y border no aumenten el tamaño real del elemento */
+    box-sizing: border-box;
+}
+
+/* Configuración general del documento */
+html {
+    /* Tamaño base de fuente para usar unidades rem */
+    font-size: 16px;
+    /* Hace suave el desplazamiento cuando se usan enlaces tipo ancla (#) */
+    scroll-behavior: smooth;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    /* Mejora la separación entre líneas de texto */
+    line-height: 1.6;
+    /* Evita que el header fijo tape el contenido superior */
+    padding-top: 82px;
+}
+
+/* Hace que imágenes, videos e iframes se adapten al contenedor */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+/* Evita deformación de imágenes y espacios adicionales debajo */
+img {
+    height: auto;
+    display: block;
+}
+
+/* Quita el subrayado predeterminado de los enlaces */
+a {
+    text-decoration: none;
+}
+
+/* Coloca las viñetas por dentro de la lista */
+ul {
+    list-style-position: inside;
+}
+
+
+/* ==========================================
+   UTILIDADES GENERALES
+   ========================================== */
+
+/* Contenedor reutilizable para centrar el contenido en la pantalla */
+.container {
+    width: 90%;
+    /* Limita el ancho máximo en pantallas grandes */
+    max-width: 1100px;
+    /* Centra horizontalmente el bloque */
+    margin: 0 auto;
+}
+
+/* Espaciado vertical general para secciones y asides */
+section,
+aside {
+    padding: 40px 0;
+}
+
+/* Estilo base para todos los títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+/* Separación entre párrafos */
+p {
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   HEADER / ENCABEZADO
+   ========================================== */
+
+/* 
+   position: fixed -> mantiene el encabezado siempre visible al hacer scroll.
+   z-index: 1000 -> asegura que quede por encima de los demás elementos.
+*/
+.site-header {
+    background-color: #00194a;
+    color: white;
+    padding: 18px 0;
+    border-bottom: 4px solid #00b4d8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* overflow: hidden -> limpia los elementos internos que usan float */
+.header-content {
+    overflow: hidden;
+}
+
+/* Mueve el logo a la izquierda */
+.logo {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    float: left;
+}
+
+
+/* ==========================================
+   NAVEGACIÓN (MENÚ)
+   ========================================== */
+
+/* Mueve el menú a la derecha */
+.main-nav {
+    float: right;
+}
+
+/* Quita las viñetas del menú */
+.main-nav ul {
+    list-style: none;
+}
+
+/* Muestra los ítems del menú uno al lado del otro */
+.main-nav li {
+    display: inline-block;
+    margin-left: 18px;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Cambio de color cuando pasas el puntero sobre los enlaces */
+.main-nav a:hover {
+    background-color: #00b4d8;
+    color: #00194a;
+}
+
+
+/* ==========================================
+   SECCIÓN HERO (Portada principal)
+   ========================================== */
+
+.hero {
+    background-color: #e0f2fe;
+    padding: 70px 0;
+}
+
+/* Contiene las dos columnas creadas con float */
+.hero-content {
+    overflow: hidden;
+}
+
+/* Columna izquierda: texto */
+.hero-text {
+    width: 48%;
+    float: left;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #00194a;
+    margin-bottom: 20px;
+    /* Reduce la altura entre líneas del título principal */
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+/* Etiqueta visual decorativa encima del título */
+.hero-badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #00194a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Columna derecha: imagen con tarjeta */
+.hero-image {
+    width: 48%;
+    float: right;
+    background-color: white;
+    padding: 15px;
+    border-radius: 18px;
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.hero-image figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #64748b;
+    text-align: center;
+}
+
+/* Caja con posición relativa que sirve de marco para elementos absolutos */
+.hero-info {
+    margin-top: 25px;
+    padding: 25px 18px 18px 18px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-left: 5px solid #00b4d8;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Etiqueta flotante dentro del contenedor .hero-info */
+.info-label {
+    position: absolute;
+    top: -12px;
+    right: 18px;
+    background-color: #00194a;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+
+/* Enlace estilizado con apariencia de botón */
+.btn-primary {
+    display: inline-block;
+    background-color: #00194a;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #00b4d8;
+    color: #00194a;
+}
+
+/* Botón HTML real */
+.btn-secondary {
+    background-color: #00b4d8;
+    color: #00194a;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+
+    /* Cambia cursor para indicar clic */
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   SECCIÓN EVENTOS (Tarjetas)
+   ========================================== */
+
+.events-section {
+    background-color: #f4f7fb;
+}
+
+/* Contiene las 3 tarjetas alineadas con float */
+.events-grid {
+    overflow: hidden;
+}
+
+/* Cada tarjeta ocupa un tercio del espacio aprox. */
+.event-card {
+    width: 31%;
+    float: left;
+    margin-right: 3.5%;
+    background-color: white;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    position: relative; /* Permite ubicar la etiqueta flotante .card-label */
+}
+
+/* Quita el margen derecho en la tercera tarjeta para que quepan bien */
+.event-card:last-child {
+    margin-right: 0;
+}
+
+.event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Recorta la imagen proporcionalmente sin deformarla */
+}
+
+/* Etiqueta flotante superior dentro de la tarjeta */
+.card-label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #00194a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 5;
+}
+
+/* Etiqueta de categoría en el contenido de la tarjeta */
+.event-category {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #00194a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   ASIDE / BARRA LATERAL
+   ========================================== */
+
+/* clear: both -> evita conflictos con los elementos flotantes anteriores */
+aside {
+    background-color: #ecfeff;
+    border-top: 1px solid #bae6fd;
+    border-bottom: 1px solid #bae6fd;
+    clear: both;
+}
+
+
+/* ==========================================
+   TABLA DE EVENTOS
+   ========================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+    clear: both;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+}
+
+th {
+    background-color: #00194a;
+    color: white;
+}
+
+/* Alterna colores en las filas pares para facilitar la lectura */
+tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+
+/* ==========================================
+   FOOTER / PIE DE PÁGINA
+   ========================================== */
+
+footer {
+    background-color: #00194a;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+    clear: both;
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVO (PANTALLAS PEQUEÑAS)
+   ========================================== */
+
+/* Se aplica solo cuando la pantalla mide 768px o menos (celulares/tablets) */
+@media (max-width: 768px) {
+    /* Elimina el diseño en columnas paralelas y pasa todo a 100% de ancho */
+    .logo,
+    .main-nav,
+    .hero-text,
+    .hero-image,
+    .event-card {
+        float: none;
+        width: 100%;
+    }
+
+    /* Muestra los ítems del menú en vertical */
+    .main-nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    /* Agrega más espacio arriba por el menú desplegado que ocupa más alto */
+    body {
+        padding-top: 150px;
+    }
+}
